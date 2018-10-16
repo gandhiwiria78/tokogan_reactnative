@@ -1,0 +1,18 @@
+Backup KODE:
+{- app.js untuk tokogan masih tahap Home -}
+
+import React, {Component} from 'react';
+import {Container, Content} from 'native-base';
+//import Register from './src/layouts/Register';
+import Gosek from './src/layouts/Gosek/Home';
+import styles from './src/styles/styles';
+import Home from './src/layouts/frontend/Home';
+
+export default class App extends Component {
+  render() {
+    return (
+      <Home />
+    );
+  }
+}
+{- End -}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.34 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #434242;
+        font-size: 23px;
+      }
+
+      .cls-1, .cls-3 {
+        font-family: AppleSDGothicNeo-ExtraBold, Apple SD Gothic Neo;
+        font-weight: 800;
+      }
+
+      .cls-2 {
+        fill: #2ac60e;
+      }
+
+      .cls-3 {
+        fill: #454343;
+        font-size: 22px;
+      }
+    </style>
+  </defs>
+  <g id="Logo_app" transform="translate(-16 -7)">
+    <text id="GO" class="cls-1" transform="translate(16 28)"><tspan x="0" y="0">GO</tspan></text>
+    <g id="motor" transform="translate(47.359 10.594)">
+      <path id="Path_1" data-name="Path 1" class="cls-2" d="M27.768,28.2l1.151-.4a4.083,4.083,0,0,0-2.44-2.029l-1.9-7.509H25.2a1.381,1.381,0,0,0,0-2.761H20.188v1.867h2.359L21.52,27.236H15.125l.641-4.278a1.066,1.066,0,0,0,.958-1.056v-.8a1.069,1.069,0,0,0-1.066-1.067H8.73A1.069,1.069,0,0,0,7.665,21.1v.8L5,26.333v4.1H6.878c-.007.089-.013.178-.013.267a3.2,3.2,0,1,0,6.395,0c0-.089-.006-.178-.013-.267H22.6c-.007.088-.014.177-.014.267A3.2,3.2,0,1,0,27.768,28.2Zm-17.705,3.84A1.334,1.334,0,0,1,8.73,30.7a1.475,1.475,0,0,1,.026-.267h2.613a1.476,1.476,0,0,1,.026.267A1.335,1.335,0,0,1,10.063,32.037Zm-.468-3.678.872-2.248-2.006-.022,3.118-3.121-.918,2.294,2.051-.024Zm16.188,3.678A1.334,1.334,0,1,1,27.115,30.7,1.334,1.334,0,0,1,25.783,32.037Z" transform="translate(-5 -15.501)"/>
+    </g>
+    <text id="SEK" class="cls-3" transform="translate(71.34 27)"><tspan x="0" y="0">SEK</tspan></text>
+  </g>
+</svg>
