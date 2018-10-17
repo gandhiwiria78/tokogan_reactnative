@@ -14,10 +14,12 @@ export default class crud extends Component {
   constructor(props) {
     super(props);
   }
+
   state = {
+    isEdit:false,
     hobi :'',
     nama :'',
-    data:[]
+    data:{}
   };
   componentDidMount(){
    // memanggil database 
@@ -57,7 +59,7 @@ export default class crud extends Component {
     todo.orderByKey().on('value',(showData)=>{
         //console.log(showData.val())
         if(showData.val()!==null){
-            this.setState({data: [showData.val()]})
+            this.setState({data: showData.val()})
 
         }
     },(error)=>{
@@ -73,7 +75,26 @@ export default class crud extends Component {
         child_moved = memberikan nilai balik hanya saat ada perubahan posisi data 
     */
   }
-
+  onbuttonHapus(data){
+    
+    let db = firebase.database();
+    db.ref('Todo/'+data).remove();
+    console.log('hapus',data);
+  }
+  onButtonEdit(data){
+    let db = firebase.database();
+    db.ref('Todo/'+data).once('value',(showData)=>{
+        let nama = showData.val().nama;
+        let hobi = showData.val().hobi;
+        this.setState({
+            nama:nama,
+            hobi:hobi,
+            edit:data,
+        })
+    })
+    this.setState({isEdit:true})
+       
+  }
   addData=()=>{
     let {hobi, nama} = this.state;
     let db = firebase.database();
@@ -87,17 +108,67 @@ export default class crud extends Component {
     id.set(newitem);
     //console.log('id',id);
     //console.log('masuk'+hobi+nama)
+    this.setState({
+        hobi :'',
+        nama :'',
+    })
   }
-
+  updateData(){
+    let iddata= this.state.edit;
+    console.log('id',iddata);
+    let db = firebase.database();
+    let updateItems = {
+        nama:this.state.nama,
+        hobi:this.state.hobi
+    }
+    db.ref('Todo/'+iddata).update(updateItems);
+    this.setState({
+        isEdit:false,
+        hobi :'',
+        nama :'',
+    })
+  }
+  onEdit(){
+      if (this.state.isEdit){
+          return(
+            <Button onPress={()=>this.updateData()} block >
+                <Text>Edit to List</Text>
+            </Button>
+          )
+      }else{
+          return(
+            <Button onPress={this.addData} block >
+                <Text>Add to List</Text>
+            </Button>
+          )
+      }
+  }
   render() {
     //console.log('list data', this.state.data);
     let {data} = this.state;
-    console.log(data)
     
-    let todo = Object.keys(data).map((items)=>{
+    let test = Object.keys(data).sort()
+    //console.log('json',JSON.stringify(data));
+    //console.log('parse',JSON.parse(JSON.stringify(data)))
+    //console.log('data',data)
+    //console.log('sort',test)
+    //console.log('Nosort',Object.keys(data));
+
+    let todo = Object.keys(data).sort().map((items)=>{
         return (
             <CardItem key={items}>
-                <Text >=>nama:{data[items].nama}, Hobi:{data[items].hobi}</Text>
+                <Text >nama:{data[items].nama}, Hobi:{data[items].hobi}</Text>
+                <Button
+                    onPress={()=>this.onbuttonHapus(items)}
+                >
+                    <Text>Hapus</Text>
+                </Button>
+                <Text> Atau </Text>
+                <Button
+                    onPress={()=>this.onButtonEdit(items)}
+                >
+                    <Text>Edit</Text>
+                </Button>
             </CardItem>
         );
     });
@@ -128,9 +199,7 @@ export default class crud extends Component {
                     <Icon name='user' type='FontAwesome'/>
                     <Input name="hobi" placeholder='masukan hobi anda' label="hobi" onChangeText={(e)=>this.setState({hobi:e})} value={this.state.hobi} />
                 </Item>
-                <Button onPress={this.addData} block >
-                    <Text>Add to List</Text>
-                </Button>
+                {this.onEdit()}
             </Card>
             <H1>List Item </H1>
             <Card>

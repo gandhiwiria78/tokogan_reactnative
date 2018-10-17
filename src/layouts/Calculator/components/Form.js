@@ -12,13 +12,13 @@ export class Form extends Component {
 
   onSubmit=(e)=>{
     let {email, nama} = this.state;
-   // console.log(email)
+    // console.log(email)
     this.props.login(email, nama);
   }
   
   render() {
     let {email,nama} = this.state;
-    let{isloginSukses,isloginPending,isloginError} = this.props;
+    let{ isloginSukses,isloginPending,isloginError } = this.props;
    
     return (
       <Container>

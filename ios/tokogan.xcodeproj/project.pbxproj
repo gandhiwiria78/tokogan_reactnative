@@ -17,6 +17,7 @@
 		0489C0A8215FCBCB0087510C /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0489C0A7215FCB5F0087510C /* libRNFirebase.a */; };
 		0489C0A9215FCBD50087510C /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480B316215B365800A7FC95 /* libRNSVG.a */; };
 		049E2682215B3D78005D30F5 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480B310215B365800A7FC95 /* libBVLinearGradient.a */; };
+		04A5EBA32177079C00A3AAA9 /* librn-fetch-blob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A5EBA22177079C00A3AAA9 /* librn-fetch-blob.a */; };
 		04DF97362161102500E7315F /* libreact-native-google-maps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DF97352161102500E7315F /* libreact-native-google-maps.a */; };
 		04DF97382161102500E7315F /* libreact-native-maps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DF97372161102500E7315F /* libreact-native-maps.a */; };
 		04DF973A2161103700E7315F /* libPods-tokogan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DF97392161103700E7315F /* libPods-tokogan.a */; };
@@ -394,6 +395,7 @@
 		00E356F21AD99517003FC87E /* tokoganTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tokoganTests.m; sourceTree = "<group>"; };
 		0476C28B2162554D00404C8A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0489C12D215FDD920087510C /* libPods-tokogan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-tokogan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A5EBA22177079C00A3AAA9 /* librn-fetch-blob.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "librn-fetch-blob.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DF97352161102500E7315F /* libreact-native-google-maps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-google-maps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DF97372161102500E7315F /* libreact-native-maps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-maps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DF97392161103700E7315F /* libPods-tokogan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-tokogan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -468,6 +470,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A5EBA32177079C00A3AAA9 /* librn-fetch-blob.a in Frameworks */,
 				04DF973F2161112900E7315F /* libcxxreact.a in Frameworks */,
 				04DF973A2161103700E7315F /* libPods-tokogan.a in Frameworks */,
 				0476C28C2162554D00404C8A /* MapKit.framework in Frameworks */,
@@ -676,6 +679,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04A5EBA22177079C00A3AAA9 /* librn-fetch-blob.a */,
 				0476C28B2162554D00404C8A /* MapKit.framework */,
 				04DF973D2161110400E7315F /* libGoogleUtilities.a */,
 				04DF973B216110ED00E7315F /* libGoogle-Maps-iOS-Utils.a */,
