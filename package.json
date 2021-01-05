@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@mapbox/polyline": "^1.0.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "es6-promise": "^4.2.5",
     "native-base": "^2.8.0",
     "react": "16.5.0",
